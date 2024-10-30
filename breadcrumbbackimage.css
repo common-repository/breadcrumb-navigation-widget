@@ -1,0 +1,27 @@
+/*  Breadcrumb style with  the background image */
+	.crumbs {overflow:auto; width:100%;} /* to force full height, clear floats */
+/*	li.crumbs ul {margin: 0 2em 0 0; list-style-type: none; } */
+	.crumbs ul{
+		margin: 0 0 20px 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	.crumbs li { 
+		display:inline;	
+/*		margin:0; padding:0; */
+		float: left;
+}
+	.crumbs ul li a {
+		float: left; /* float to force to full height so image goes up to the border, in case want to use borders */ 
+		padding-right: 0.5em; 
+		margin-right: 0.5em;
+		background: url("crumbs.gif") no-repeat right center; 
+		}
+	
+	.crumbs ul li:before { 
+		content: none;
+		}  
+/* reverse out twenty-seventeen strange shifting up of current list item*/	
+	.crumbs ul li + li {
+		margin-top: 0px;
+	}
